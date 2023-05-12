@@ -5,10 +5,15 @@ PATH = "','usr','local','bin','chromedriver"
 driver = webdriver.Chrome(PATH)
 from selenium.webdriver.common.by import By
 
-liste = open("words.txt", "r")
-words = liste.read().split(',')
+def launchBrowser(nb):
+   global liste
+   if nb == 10000:
+       liste = open("10k.txt", "r")
+   else :
+         liste = open("words.txt", "r")
 
-def launchBrowser():
+    
+   words = liste.read().split(',')
    driver.get("https://cemantix.certitudes.org/pedantix")
    print(driver.title)
    for word in words:
