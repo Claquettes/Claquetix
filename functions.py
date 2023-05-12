@@ -21,5 +21,3 @@ def launchBrowser(nb):
        search.send_keys(word)
        search.send_keys(Keys.RETURN)
        time.sleep(0.1)  
-   while(True):
-       pass
