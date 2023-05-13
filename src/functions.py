@@ -9,15 +9,15 @@ def launchBrowser(nb):
    print("chargement de la liste de mots...")
    match nb:
          case 100:
-            liste = open("liste100.txt", "r")
+            liste = open("words/liste100.txt", "r")
          case 1000:
-            liste = open("liste1000.txt", "r")
+            liste = open("words/liste1000.txt", "r")
          case 10000:
-            liste = open("liste10000.txt", "r")
+            liste = open("words/liste10000.txt", "r")
          case 600000:
-            liste = open("liste600000.txt", "r")
+            liste = open("words/liste600000.txt", "r")
          case _ :
-            liste = open("liste_opti.txt", "r")
+            liste = open("words/liste_opti.txt", "r")
 
    print("liste chargée !")
    print("on a chargé la liste de "+str(nb)+" mots")
