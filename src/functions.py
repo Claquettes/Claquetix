@@ -5,14 +5,37 @@ PATH = "','usr','local','bin','chromedriver"
 driver = webdriver.Chrome(PATH)
 from selenium.webdriver.common.by import By
 
-CanRun = True
 
-def stop():
-   CanRun = False
-   driver.quit()
-   exit()
-
-
+def vraiMot(mot) :
+   vrai_mot=""
+   for lettre in mot:
+      if (lettre=='\n'):#on passe à la ligne suivante
+         continue
+      elif (lettre=='©') :
+         vrai_mot = vrai_mot[:-1] + 'é'
+      elif (lettre=='¨') :
+         vrai_mot = vrai_mot[:-1] + 'è'
+      elif (lettre=='Ã'):
+         change=1
+         vrai_mot+="à"
+      elif (lettre=='¢'):
+         vrai_mot = vrai_mot[:-1] + 'â'
+      elif (lettre=='ª'):
+         vrai_mot = vrai_mot[:-1] + 'ê'
+      elif (lettre=='®'):
+         vrai_mot = vrai_mot[:-1] + 'î'
+      elif (lettre=='¹'):
+         vrai_mot = vrai_mot[:-1] + 'ù'
+      elif (lettre=='´'):
+         vrai_mot = vrai_mot[:-1] + 'ô'
+      elif (lettre=='§'):
+         vrai_mot = vrai_mot[:-1] + 'ç'
+      elif (lettre=='¯'):
+         vrai_mot = vrai_mot[:-1] + 'ï'
+      elif (lettre=='»'):
+         vrai_mot = vrai_mot[:-1] + 'û'
+      else : vrai_mot+=lettre
+   return vrai_mot
 
 def launchBrowser(nb):
    print("chargement de la liste de mots...")
@@ -35,7 +58,7 @@ def launchBrowser(nb):
    print(driver.title)
 
    for word in words:
-      search = driver.find_element(By.ID, "pedantix-guess")
-      search.send_keys(word)
-      search.send_keys(Keys.RETURN)
-      time.sleep(0.1)  
+       search = driver.find_element(By.ID, "pedantix-guess")
+       search.send_keys(vraiMot(word))
+       search.send_keys(Keys.RETURN)
+       time.sleep(0.1)
