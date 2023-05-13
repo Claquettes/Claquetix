@@ -16,6 +16,8 @@ def launchBrowser(nb):
             liste = open("liste10000.txt", "r")
          case 600000:
             liste = open("liste600000.txt", "r")
+         case _ :
+            liste = open("liste_opti.txt", "r")
 
    print("liste chargée !")
    print("on a chargé la liste de "+str(nb)+" mots")

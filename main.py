@@ -28,11 +28,9 @@ nb_10000 = ttk.Radiobutton(window, text="10000", variable=nb, value=10000)
 nb_10000.grid(row=4, column=1)
 nb_600000 = ttk.Radiobutton(window, text="600000", variable=nb, value=600000)
 nb_600000.grid(row=5, column=1)
-
+infini = ttk.Radiobutton(window, text="infini", variable=nb, value=0)
+infini.grid(row=6, column=1)
 print(nb)
-
-
-
 
 window.mainloop()
 
