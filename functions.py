@@ -6,13 +6,19 @@ driver = webdriver.Chrome(PATH)
 from selenium.webdriver.common.by import By
 
 def launchBrowser(nb):
-   global liste
-   if nb == 10000:
-       liste = open("10k.txt", "r")
-   else :
-         liste = open("words.txt", "r")
+   print("chargement de la liste de mots...")
+   match nb:
+         case 100:
+            liste = open("liste100.txt", "r")
+         case 1000:
+            liste = open("liste1000.txt", "r")
+         case 10000:
+            liste = open("liste10000.txt", "r")
+         case 600000:
+            liste = open("liste600000.txt", "r")
 
-    
+   print("liste chargée !")
+   print("on a chargé la liste de "+str(nb)+" mots")
    words = liste.read().split(',')
    driver.get("https://cemantix.certitudes.org/pedantix")
    print(driver.title)
