@@ -1,4 +1,4 @@
-![Compatible](https://img.shields.io/badge/Compatible-linuxX64%Windows-success)
+![Compatible](https://img.shields.io/badge/Compatible-linuxX64--Windows-success)
 ![Language](https://img.shields.io/badge/Language-Py-blue)
 ![License](https://img.shields.io/badge/Licence-CC%20BY--NC--SA%204.0-brightgreen)
 
