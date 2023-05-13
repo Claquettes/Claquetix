@@ -11,7 +11,7 @@ def start(nb):
 
 window = tk.Tk()
 window.title("Claquetix")
-window.geometry("500x500")
+window.geometry("500x50")
 
 nb = tk.IntVar()
 nb_menu = ttk.OptionMenu(window, nb, 1000, 100, 1000, 10000, 600000, )
