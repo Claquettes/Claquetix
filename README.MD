@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/Licence-CC%20BY--NC--SA%204.0-brightgreen)
 
 # Description
-Claquetix, créé par Mathieu Ponton @Claquettes et @anto_slv est un programme standalone en python, permettant d'obtenir un boost, voir de compléter complétement le jeu [Pedantix](https://cemantix.certitudes.org/pedantix) de Cemantix.
+Claquetix, créé par Mathieu Ponton @Claquettes et @anto-slv est un programme standalone en python, permettant d'obtenir un boost, voir de compléter complétement le jeu [Pedantix](https://cemantix.certitudes.org/pedantix) de Cemantix.
 
 # Installation
 ## Prérequis
