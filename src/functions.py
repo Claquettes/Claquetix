@@ -5,6 +5,15 @@ PATH = "','usr','local','bin','chromedriver"
 driver = webdriver.Chrome(PATH)
 from selenium.webdriver.common.by import By
 
+CanRun = True
+
+def stop():
+   CanRun = False
+   driver.quit()
+   exit()
+
+
+
 def launchBrowser(nb):
    print("chargement de la liste de mots...")
    match nb:
@@ -24,8 +33,9 @@ def launchBrowser(nb):
    words = liste.read().split(',')
    driver.get("https://cemantix.certitudes.org/pedantix")
    print(driver.title)
+
    for word in words:
-       search = driver.find_element(By.ID, "pedantix-guess")
-       search.send_keys(word)
-       search.send_keys(Keys.RETURN)
-       time.sleep(0.1)  
+      search = driver.find_element(By.ID, "pedantix-guess")
+      search.send_keys(word)
+      search.send_keys(Keys.RETURN)
+      time.sleep(0.1)  
