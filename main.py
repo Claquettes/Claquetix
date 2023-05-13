@@ -14,7 +14,7 @@ window.title("Claquetix")
 window.geometry("500x50")
 
 nb = tk.IntVar()
-nb_menu = ttk.OptionMenu(window, nb, 1000, 100, 1000, 10000, 600000)
+nb_menu = ttk.OptionMenu(window, nb, 1000, 100, 1000, 10000, 600000,311384123)
 start_button = ttk.Button(window, text="Start", command=lambda: start(nb.get()))
 label = ttk.Label(window, text="Choisissez le nombre de mots à tester")
 
